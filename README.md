@@ -11,7 +11,7 @@ This repository contains a bash script for backing up, encrypting, and transferr
 
 2. **Script Permissions:** After writing the bash script for the backup, encryption, and transfer to the remote server, change the script's permissions with `chmod 700 <filename>` so that only the root user can view and run it.
 
-3. **Password File:** The script requires a secure password file. To create this file, make a file in the `/home/zero/Backup` directory called `pwd` and change the file permissions so that only the owner (in this case, root) user can read it. This can be done with `chmod 600 pwd`.
+3. **Password File:** The script requires a secure password file. To create this file, make a file in the `/root/Backup` directory called `pwd` and change the file permissions so that only the owner (in this case, root) user can read it. This can be done with `chmod 600 pwd`.
 
 4. **Cron Job:** To automate the backup process, create a cron job that runs the backup script at 3AM every Sunday from the root account. Use `crontab -e` and append this line to the end of the file: `0 3 * * 0 /home/zero/Backup/backup_script.sh`.
 
